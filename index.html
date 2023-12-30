@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Clone</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    
+</head>
+<body>
+    <audio src="./assets/audio/2.mp3" id="audioJump">
+    </audio>
+    <audio src="./assets/audio/1.mp3" id="audioGame"></audio>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            
+        </div>
+    </div>
+    <div id="scoreBoard" class="score-board">
+        Score : <span id="score"></span>
+    </div>
+    
+    <div class="game-container">
+            <img src="./assets/image/tree-up.png" id="obstacle1" class="obstacle" alt="">
+
+            <img src="./assets/image/tree-up.png" id="obstacle2" class="obstacle" alt="">
+
+            <img src="./assets/image/tree-up.png" id="obstacle3" class="obstacle" alt="">
+            <img src="./assets/image/tree-down.png" id="obstacle4" class="obstacle" alt="">
+            <img src="./assets/image/tree-down.png" id="obstacle5" class="obstacle" alt="">
+            <img src="./assets/image/tree-down.png" id="obstacle6" class="obstacle" alt="">
+        
+        <div id="oiseau">
+        </div>
+    </div>
+    <div id="levelBar" class="level-bar">
+        Niveau : <span id="level"></span>
+    </div>
+    <script src="./script/index.js"></script>
+</body>
+</html>

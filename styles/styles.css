@@ -1,0 +1,145 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.score-board {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: black;
+    z-index: 10;
+}
+
+
+.level-bar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: black;
+    text-align: center;
+    z-index: 10;
+}
+
+
+/* Le fond de la modal */
+.modal {
+    position: fixed; /* Reste en place même lors du défilement */
+    z-index: 1; /* Se situe au-dessus de tout */
+    left: 0;
+    top: 0;
+    width: 100%; /* Pleine largeur */
+    height: 100%; /* Pleine hauteur */
+    overflow: auto; /* Active le défilement si nécessaire */
+    background-color: rgb(0,0,0); /* Fond noir */
+    background-color: rgba(0,0,0,0.4); /* Fond noir avec opacité */
+}
+
+/* Style du contenu de la modal */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% du haut et centré horizontalement */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largeur */
+    text-align: center;
+}
+.modal-content div {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: skyblue; 
+}
+
+#oiseau{
+    position: absolute;
+    img{
+        border: 0;
+        width: 45%;
+    }
+    
+}
+
+.obstacle {
+    position: absolute;
+    left: 100%; /* Position de départ hors de l'écran à droite */
+    border: 0;
+    transition: 2s;
+}
+
+@keyframes moveObstacle {
+    0% { left: 100%; }
+    100% { left: -50px; }
+}
+
+/* Première paire d'obstacles */
+#obstacle1 {
+    top: 0;
+    animation: moveObstacle 3s linear infinite;
+    height: 45%;
+    
+}
+
+#obstacle4 {
+    bottom: 0;
+    animation: moveObstacle 3s linear infinite;
+    height: 30%;
+}
+
+/* Deuxième paire d'obstacles */
+#obstacle2 {
+    top: 0;
+    animation: moveObstacle 3s linear infinite 1s;
+    height: 30%;
+}
+
+#obstacle5 {
+    bottom: 0;
+    animation: moveObstacle 3s linear infinite 1s;
+    height: 45%;
+}
+
+/* Troisième paire d'obstacles */
+#obstacle3 {
+    top: 0;
+    animation: moveObstacle 3s linear infinite 2s;
+    height: 45%;
+}
+
+#obstacle6 {
+    bottom: 0;
+    animation: moveObstacle 3s linear infinite 2s;
+    height: 30%;
+}
+
+
+
